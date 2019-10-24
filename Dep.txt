@@ -1,0 +1,11 @@
+
+#pip is required and install the following lib.
+
+bs4
+requests
+tqdm
+pyfiglet
+timeit
+
+
+# others are system builtin 
