@@ -71,6 +71,19 @@ def out():
     print('------ Thank You  -------')
     print()
 
+def proc():
+    y = 'https://sslproxies.org/'
+    r1 = requests.get(y)
+    sopas = bs4.BeautifulSoup(r1.text, 'html.parser')
+    s1 = sopas.find_all('td')[0] # first index
+    s2 = sopas.find_all('td')[1]
+    s3 = str(s1.text + ':' + s2.text)
+    print(' We will be using this IP address: ' + s3)
+
+
+
+
+
 
 
 
@@ -81,7 +94,7 @@ def out():
 
 
 banner()  # Banner
-
+proxies = proc()
 
 while True:
     try:
@@ -104,24 +117,24 @@ while True:
         else:
             start = timeit.default_timer()  # TIMEIT module
             patola = 'https://hashtoolkit.com/reverse-hash/?hash='
-            kamote = requests.get(patola + miswa)
+            kamote = requests.get(patola + miswa, proxies = proxies)
 
 
             soup = bs4.BeautifulSoup(kamote.text, "html.parser")
 
 
             x2 = miswa
-            x = soup.find("td", {"class": "res-text"}).text
-            x1 = str(x.text)
+            x = soup.find("td", {"class": "res-text"})
+            x1 = x
 
             print(u"Algorithm Type:\u001b[32m  " + soup.td.text)
-            print(u"\u001b[0mDecrypted Value:\u001b[32m " + str(x1.text).strip('\t\r\n'))
+            print(u"\u001b[0mDecrypted Value:\u001b[32m " + (x1.text).strip('\t\r\n'))
             print(u'\u001b[0m')
 
             stop = timeit.default_timer()
             y = str(stop - start)  # TIMEIT module
 
-            print(('Execution Time: ' + str(y[0:8]) + " /s"))  # Time display for execution
+            print(str('Execution Time: ' + (y[0:8]) + " /s"))  # Time display for execution
             print()
 
 
@@ -140,7 +153,7 @@ while True:
 
 
 
-    except Exception as e:
-        # print(" Unable to find possible match !! ")
-        print(e)
+    except:
+        print(" Unable to find possible match !!.\n Please try again")
+        #print(e)
         print()
