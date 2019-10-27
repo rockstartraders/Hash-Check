@@ -6,6 +6,7 @@ requests
 tqdm
 pyfiglet
 timeit
+os
 
 
 # others are system builtin 

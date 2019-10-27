@@ -9,6 +9,7 @@ from tqdm import tqdm
 import pyfiglet
 import time
 import timeit
+import os
 import readline
 
 
@@ -81,35 +82,47 @@ def out():
 
 banner()  # Banner
 
+
 while True:
     try:
 
-
+        print()
         miswa = input('Enter Hash: ')
-
         print()
+        if miswa == "Exit" or miswa == "exit":
+            print("Thank You.")
+            break
 
-        start = timeit.default_timer()  # TIMEIT module
-        patola = 'https://hashtoolkit.com/reverse-hash/?hash='
-        kamote = requests.get(patola + miswa)
+        elif miswa == "Help" or miswa == "help":
+            help()
+            continue
+
+        elif miswa == "Clear" or miswa == "clear":
+            os.system('clear')
+            continue
+
+        else:
+            start = timeit.default_timer()  # TIMEIT module
+            patola = 'https://hashtoolkit.com/reverse-hash/?hash='
+            kamote = requests.get(patola + miswa)
 
 
-        soup = bs4.BeautifulSoup(kamote.text, "html.parser")
+            soup = bs4.BeautifulSoup(kamote.text, "html.parser")
 
 
-        x2 = miswa
-        x = soup.find("td", {"class": "res-text"}).text
-        x1 = str(x.text)
+            x2 = miswa
+            x = soup.find("td", {"class": "res-text"}).text
+            x1 = str(x.text)
 
-        print(u"Algorithm Type:\u001b[32m  " + soup.td.text)
-        print(u"\u001b[0mDecrypted Value:\u001b[32m " + str(x1.text).strip('\t\r\n'))
-        print(u'\u001b[0m')
+            print(u"Algorithm Type:\u001b[32m  " + soup.td.text)
+            print(u"\u001b[0mDecrypted Value:\u001b[32m " + str(x1.text).strip('\t\r\n'))
+            print(u'\u001b[0m')
 
-        stop = timeit.default_timer()
-        y = str(stop - start)  # TIMEIT module
+            stop = timeit.default_timer()
+            y = str(stop - start)  # TIMEIT module
 
-        print(('Execution Time: ' + str(y[0:8]) + " /s"))  # Time display for execution
-        print()
+            print(('Execution Time: ' + str(y[0:8]) + " /s"))  # Time display for execution
+            print()
 
 
 
