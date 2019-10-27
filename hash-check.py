@@ -92,7 +92,7 @@ def proc():
 
 
 
-
+headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36'}
 banner()  # Banner
 proxies = proc()
 
@@ -117,7 +117,7 @@ while True:
         else:
             start = timeit.default_timer()  # TIMEIT module
             patola = 'https://hashtoolkit.com/reverse-hash/?hash='
-            kamote = requests.get(patola + miswa, proxies = proxies)
+            kamote = requests.get(patola + miswa, headers=headers, proxies = proxies)
 
 
             soup = bs4.BeautifulSoup(kamote.text, "html.parser")
@@ -154,6 +154,6 @@ while True:
 
 
     except:
-        print(" Unable to find possible match !!.\n Please try again")
+        print(" Unable to find possible match !!.\n Network connectivity can also be a reason. \n Please try again.")
         #print(e)
         print()
