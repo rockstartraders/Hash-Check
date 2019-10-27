@@ -89,7 +89,6 @@ while True:
 
         print()
 
-
         start = timeit.default_timer()  # TIMEIT module
         patola = 'https://hashtoolkit.com/reverse-hash/?hash='
         kamote = requests.get(patola + miswa)
@@ -99,11 +98,11 @@ while True:
 
 
         x2 = miswa
-        x = soup.find("td", {"class": "res-text"})
+        x = soup.find("td", {"class": "res-text"}).text
         x1 = str(x.text)
 
         print(u"Algorithm Type:\u001b[32m  " + soup.td.text)
-        print(u"\u001b[0mDecrypted Value:\u001b[32m " + (x.text).strip('\t\r\n'))
+        print(u"\u001b[0mDecrypted Value:\u001b[32m " + str(x1.text).strip('\t\r\n'))
         print(u'\u001b[0m')
 
         stop = timeit.default_timer()
