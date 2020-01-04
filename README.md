@@ -30,7 +30,7 @@ Hash-Check
 
 <br>
 
-   3. Install all requirted dependency via PIP.
+   3. Install all required dependency via PIP.
 
       #### `Please see Dep.txt`
          I'm using Python Version 3.++ for this so possible that version 2 may not work.
@@ -56,7 +56,7 @@ Hash-Check
 
  ## Demo
 
- 1. Here is a demo. 
+ 1. Snapshot. 
    
 <img src="img/hash-check.gif" width="160%" height="130%" align="center">
 
