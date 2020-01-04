@@ -17,7 +17,7 @@ Hash-Check
 
  ### Install Instruction: 
 
-1. Clone the this repo. 
+1. Clone this repo. 
     #### `git clone https://github.com/rockstartraders/Hash-Check`
 
    If git is not installed just download it then extract it to your pc.
@@ -43,7 +43,7 @@ Hash-Check
 
          If permission error occurs you know the drill.
         ## [Sudo](https://en.wikipedia.org/wiki/Sudo) 
-         is the key.
+         is the key
 
 <br>
 
