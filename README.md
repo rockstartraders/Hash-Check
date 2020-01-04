@@ -46,7 +46,7 @@ Hash-Check
 
  1. Here is a demo. 
  <br>
-
-  ![alt text](img/hash-check.gif)
+  
+<img src="img/hash-check.gif" width="150%" height="120%" align="center">
 
 <br>
