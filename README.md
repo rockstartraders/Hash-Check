@@ -40,7 +40,8 @@ Hash-Check
   4. Change Permission.
 
       #### `chmod u+x hash-check.py`
-         If permission error occurs you know the drill  [sudo](https://en.wikipedia.org/wiki/Sudo) is the key.
+      
+         If permission error occurs you know the drill [Sudo] (https://en.wikipedia.org/wiki/Sudo) is the key.
 
 <br>
 
