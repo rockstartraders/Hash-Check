@@ -4,6 +4,15 @@ Hash-Check
 
 
 
+- A script / program created using Python via web scraping using  _**Requests module and BeautifulSoup**_. 
+
+- Hash Code to String 
+- **This can detect and convert the following ==>** md5, sha1, sha256, sha356 and sha512. 
+
+- With switching UA (**_UserAgents_**) and IP Address.
+
+
+
  ### Install Instruction: 
 
 1. Clone the this repo. 
@@ -11,13 +20,12 @@ Hash-Check
 
    If git is not installed just download it then extract it to your pc.
 <br>
-<br>
+
  
  2. After cloning go to the directory.
 
       #### `cd Hash Check/`
 
-<br>
 <br>
 
    3. Install all requirted dependency via PIP.
@@ -38,15 +46,13 @@ Hash-Check
       #### `./hash-check.py`
 
 <br>
-<br>
 
->>
+
 
  ## Demo
 
  1. Here is a demo. 
- <br>
-  
-<img src="img/hash-check.gif" width="150%" height="120%" align="center">
+   
+<img src="img/hash-check.gif" width="160%" height="130%" align="center">
 
 <br>
